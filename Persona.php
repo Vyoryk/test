@@ -24,10 +24,12 @@ class Persona
     public function calcularIMC()
     {
         if ($this->nombre == null || $this->peso == null || $this->estatura == null) {
-            echo 'Necesita ingresar datos.';
+            echo 'Necesita ingresar datos correctos.';
         } else if ($this->estatura == 0) {
             echo 'La estatura debe ser mayor a 0.';
-        } else {
+        } else if(!is_numeric($this->peso) || !is_numeric($this->estatura)){
+            echo 'Debe ingresar datos numéricos en peso (Kg) y estatura (M).';
+        }        else {
             $IMC = $this->peso / pow($this->estatura, 2);
             echo 'El nombre es: ' . $this->nombre . '<br>'
                 . 'El peso es: ' . $this->peso . ' kilogramos<br>'
