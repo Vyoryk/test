@@ -34,7 +34,7 @@ class Persona
             echo 'El nombre es: ' . $this->nombre . '<br>'
                 . 'El peso es: ' . $this->peso . ' kilogramos<br>'
                 . 'La estatura es: ' . $this->estatura . ' metros<br>'
-                . 'El IMS es de: ' . $IMC . ' y su valor corresponde a ';;
+                . 'El IMS es de: ' . $IMC . ' y su valor corresponde a ';
             if ($IMC > 0 && $IMC < 18.5) {
                 echo 'Delgadez o bajo peso.';
             } else if ($IMC >= 18.5 && $IMC <= 24.9) {
